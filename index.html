@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Punkeye Pictures – Coming Soon</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #002233, #004466);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      flex-direction: column;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      max-width: 600px;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      margin: 0.5rem auto;
-    }
-    a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-    .email-link {
-      font-size: 1.2rem;
-      margin-top: 1.5rem;
-    }
-    .highlight {
-      color: #ffcc00;
-    }
-    .logo {
-      width: 220px;
-      margin-bottom: 1rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punkeye Pictures</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <img src="Retouched-PunkeyeLogo copy.jpeg" alt="Punkeye Pictures Logo" class="logo" />
-  <h1>Punkeye Pictures</h1>
-  <p class="highlight">Project-Based Programming with Purpose</p>
-  <p>We're redefining day programs for adults with developmental disabilities through creative, structured daily video and media projects. Punkeye Pictures helps participants build skills, have fun, and tell their stories—one photo, one clip at a time.</p>
-  <p>Our pilot program is launching soon with select partner organizations. If you're a family member, caregiver, or organization looking to offer meaningful engagement, structure, and joy—you're in the right place.</p>
-  <p class="email-link">Reach out to <a href="mailto:info@punkeyepictures.com">info@punkeyepictures.com</a> for early access and partnership opportunities.</p>
-  <p><em>Website coming soon. Stay tuned!</em></p>
+<header>
+  <nav>
+    <div class="logo"><a href="index.html">Punkeye Pictures</a></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>Project‑Based Programming with Purpose</h1>
+    <p>Redefining day programs for adults with developmental disabilities through creative, structured daily media projects.</p>
+    <a href="partners.html" class="cta">Get Involved</a>
+  </div>
+</div>
+
+<section>
+  <h2 class="section-title">Our Mission</h2>
+  <div class="section-content">
+    <p>We empower adults with developmental disabilities and their caregivers to tell their stories through daily micro‑tasks using smartphones. By combining structure, creativity and accessible technology, Punkeye Pictures fosters confidence, skills and authentic representation.</p>
+  </div>
+</section>
+
+<section class="section-light">
+  <h2 class="section-title">How It Works</h2>
+  <div class="section-content">
+    <p>Participants and caregivers capture short videos, photos or sounds using a unique QR code. Our automated system organises the files, freeing facilitators to focus on storytelling and connection. Over time, these micro‑contributions become compelling documentaries, music videos, animations and more.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Join Our Pilot</h2>
+  <div class="section-content">
+    <p>We're launching our pilot program soon with select partner organisations. If you're a family member, caregiver, organisation or supporter interested in meaningful engagement, structure and joy, we'd love to hear from you.</p>
+    <a href="partners.html" class="cta">Partner With Us</a>
+    <a href="contact.html" class="cta" style="margin-left: 10px;">Get Updates</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; <span id="year"></span> Punkeye Pictures. All rights reserved.</p>
+  <p>Reach us at <a href="mailto:info@punkeyepictures.com">info@punkeyepictures.com</a></p>
+  <div class="footer-links">
+    <a href="https://www.punkeyepictures.com" target="_blank">Existing site</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
