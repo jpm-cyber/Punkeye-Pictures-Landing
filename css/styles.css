@@ -239,6 +239,7 @@ main {
 .badge-2026 {
   display: inline-block;
   padding: 0.5rem 1rem;
+  white-space: nowrap;
   background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-accent-coral) 100%);
   color: var(--color-bg);
   font-family: var(--font-display);
@@ -353,6 +354,37 @@ main {
   margin-bottom: 0.5rem;
 }
 
+.accessibility-statement {
+  font-size: 0.8rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.85;
+}
+
+/* Gallery - blurred participant work placeholders */
+.gallery-blur {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-blur__item {
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  overflow: hidden;
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+}
+
+.gallery-blur__item--1 { background: linear-gradient(135deg, #ff6b4a 0%, #e84d8a 100%); }
+.gallery-blur__item--2 { background: linear-gradient(135deg, #3dd4c3 0%, #5b9cff 100%); }
+.gallery-blur__item--3 { background: linear-gradient(135deg, #f5b942 0%, #ff6b4a 100%); }
+.gallery-blur__item--4 { background: linear-gradient(135deg, #e84d8a 0%, #3dd4c3 100%); }
+.gallery-blur__item--5 { background: linear-gradient(135deg, #5b9cff 0%, #f5b942 100%); }
+.gallery-blur__item--6 { background: linear-gradient(135deg, #3dd4c3 0%, #e84d8a 100%); }
+
 .site-footer .logo {
   display: inline-block;
   margin-bottom: 1rem;
@@ -404,6 +436,57 @@ main {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Program list - what we do */
+.program-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.program-list li {
+  color: var(--color-text-muted);
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.program-list li:last-child {
+  border-bottom: none;
+}
+
+.program-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-coral);
+  font-weight: 700;
+}
+
+.program-list strong {
+  color: var(--color-text);
+}
+
+/* CTA list - contact page */
+.cta-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.cta-list li {
+  color: var(--color-text-muted);
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.cta-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-teal);
+  font-weight: 600;
 }
 
 /* Inline links */
