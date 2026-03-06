@@ -108,18 +108,15 @@ body {
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.35rem;
-  letter-spacing: -0.02em;
-  color: var(--color-text);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  transition: color 0.3s, transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .logo:hover {
-  color: var(--color-accent-coral);
   transform: scale(1.02);
+  opacity: 0.9;
 }
 
 .logo:focus-visible {
@@ -127,8 +124,25 @@ body {
   outline-offset: 3px;
 }
 
-.logo span {
-  color: var(--color-accent-gold);
+/* Logo image: invert for dark theme (original is dark on cream) */
+.logo-img {
+  display: block;
+  height: 2.5rem;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  filter: invert(1) brightness(1.05);
+  transition: filter 0.3s;
+}
+
+.logo:hover .logo-img {
+  filter: invert(1) brightness(1.15);
+}
+
+.logo-img--footer {
+  height: 2.25rem;
+  max-width: 140px;
+  margin: 0 auto;
 }
 
 nav ul {
