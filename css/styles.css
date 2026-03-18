@@ -239,6 +239,46 @@ main {
   animation: fadeUp 0.8s var(--ease-out-expo) 0.15s forwards;
 }
 
+/* Hero with background image - Vancouver skyline */
+.page-hero--with-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-hero--with-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('../assets/photos/hero-vancouver-skyline.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-hero--with-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(248, 246, 244, 0.92) 0%, rgba(248, 246, 244, 0.97) 100%);
+}
+
+/* Section images - full width within section, rounded corners */
+.section-image {
+  margin: 2.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.section-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /* Reusable sections */
 .section {
   padding: 4rem 2rem;
