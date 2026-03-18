@@ -261,7 +261,7 @@ main {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(248, 246, 244, 0.92) 0%, rgba(248, 246, 244, 0.97) 100%);
+  background: linear-gradient(180deg, rgba(248, 246, 244, 0.55) 0%, rgba(248, 246, 244, 0.75) 100%);
 }
 
 /* Section images - full width within section, rounded corners */
