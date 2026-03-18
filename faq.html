@@ -17,7 +17,10 @@
 
   <header class="site-header" role="banner">
     <a href="index.html" class="logo" aria-label="Punkeye Pictures home">
-      <img src="assets/logo.png" alt="" class="logo-img" width="60" height="60">
+      <picture>
+        <source srcset="assets/logo.webp" type="image/webp">
+        <img src="assets/logo.png" alt="Punkeye Pictures logo" class="logo-img" width="60" height="60" fetchpriority="high">
+      </picture>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">☰</button>
     <nav aria-label="Main navigation">
@@ -88,7 +91,10 @@
 
   <footer class="site-footer" role="contentinfo">
     <a href="index.html" class="logo" aria-label="Punkeye Pictures home">
-      <img src="assets/logo.png" alt="" class="logo-img logo-img--footer" width="60" height="60">
+      <picture>
+        <source srcset="assets/logo.webp" type="image/webp">
+        <img src="assets/logo.png" alt="Punkeye Pictures logo" class="logo-img logo-img--footer" width="60" height="60" loading="lazy">
+      </picture>
     </a>
     <p>Pilot in development</p>
     <p class="accessibility-statement">Accessibility: skip links, ARIA labels, keyboard nav, focus styles, reduced-motion support. Text scales with browser settings. Video will have captions.</p>
