@@ -15,7 +15,7 @@ function initNav() {
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href') || '';
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    if (href === currentPath) {
       link.classList.add('active');
     }
   });
@@ -36,6 +36,13 @@ function initNav() {
         updateMenuState(false);
         menuToggle.focus();
       }
+    });
+
+    // Close menu when clicking outside (including nav links; exclude toggle so it can open/close)
+    document.addEventListener('click', (e) => {
+      if (!nav.classList.contains('open')) return;
+      if (menuToggle.contains(e.target)) return;
+      updateMenuState(false);
     });
   }
 }
