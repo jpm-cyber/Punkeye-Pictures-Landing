@@ -1,0 +1,33 @@
+---
+description: Where and how to create handoff notes
+globs: 
+alwaysApply: true
+---
+
+# Handoff notes
+
+When creating a handoff note (for this project or when the user asks for a handoff):
+
+## Location and filename
+
+- **Save under (The Satellite — M1 MacBook):** `/Users/joe/Library/Mobile Documents/iCloud~md~obsidian/Documents/Handoff/`
+- **The Source (M4 Mini):** `/Volumes/HomeX/joemini/Library/Mobile Documents/iCloud~md~obsidian/Documents/Handoff/` — use the path for the machine you’re on.
+- Do not create handoff notes in the project repo (e.g. no `HANDOFF.md` in repo root).
+- **Filename:** Include project and timestamp so notes are unique and sortable, e.g. `Punkeye Pictures Landing handoff 2026-03-05 14-23.md`
+- Ensure the Handoff folder exists before writing (e.g. `mkdir -p` the path above).
+
+## Required metadata (top of note)
+
+- **Sent from:** &lt;this Mac's hostname&gt; — from `hostname` (shorten to part before `.local` if desired).
+- **Day & time:** &lt;date and time with timezone&gt; — e.g. `2026-03-05 14:23 PST` from `date '+%Y-%m-%d %H:%M %Z'`.
+
+## Style (match this structure)
+
+- **First line:** `**Sent from:** &lt;hostname&gt; · **Day & time:** &lt;date time zone&gt;`
+- Use **### Section title — Subtitle** for main sections (e.g. `### Canada Council — Application Status`).
+- Use **---** between major sections.
+- Use bullet points with **bold label:** then description (e.g. `- **General version:** Invitation to…`).
+- Use tables where useful (e.g. Section | File | Status).
+- Include a **Key Documents** section with paths (e.g. `Fundraising/Canada Council/…`).
+- End with **### Next Session — Suggested First Steps** (numbered list of concrete next actions).
+- No top-level "# Handoff note" title; the first line is the metadata line above.
