@@ -29,5 +29,9 @@ When creating a handoff note (for this project or when the user asks for a hando
 - Use bullet points with **bold label:** then description (e.g. `- **General version:** Invitation to…`).
 - Use tables where useful (e.g. Section | File | Status).
 - Include a **Key Documents** section with paths (e.g. `Fundraising/Canada Council/…`).
+- When the session used **Cursor**, include **### Cursor — Chats since last handoff** (or **### Cursor — Chats since last handoff — Subtitle**) with:
+  - **Previous handoff:** wikilink to the last `Handoff/…` note (or “none” / first of its kind).
+  - **Chat subjects this session:** bullet list — each line: chat topic/title, workspace or repo if useful, one-line outcome or decision.
+  - **Optional:** transcript reference `[title](uuid)` if the user provides it; **optional short excerpts** only if needed on the other Mac (full history does not sync automatically).
 - End with **### Next Session — Suggested First Steps** (numbered list of concrete next actions).
 - No top-level "# Handoff note" title; the first line is the metadata line above.
