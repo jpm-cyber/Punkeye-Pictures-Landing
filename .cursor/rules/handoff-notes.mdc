@@ -12,6 +12,7 @@ When creating a handoff note (for this project or when the user asks for a hando
 
 - **Save under (The Satellite — M1 MacBook):** `/Users/joe/Library/Mobile Documents/iCloud~md~obsidian/Documents/Handoff/`
 - **The Source (M4 Mini):** `/Volumes/HomeX/joemini/Library/Mobile Documents/iCloud~md~obsidian/Documents/Handoff/` — use the path for the machine you’re on.
+- **This site repo** lives in the same vault: `Punkeye/Work/punkeye-pictures-com` (iCloud-synced); handoff notes still go only under `Handoff/`, not in the site repo root.
 - Do not create handoff notes in the project repo (e.g. no `HANDOFF.md` in repo root).
 - **Filename:** Include project and timestamp so notes are unique and sortable, e.g. `Punkeye Pictures Landing handoff 2026-03-05 14-23.md`
 - Ensure the Handoff folder exists before writing (e.g. `mkdir -p` the path above).
