@@ -5,32 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5f2eb">
   <meta name="color-scheme" content="light">
-  <title>Book a call — Punkeye Pictures</title>
-  <meta name="description" content="Schedule a 15-minute intro call with Punkeye Pictures. See how the model works for your organization.">
+  <title>Book a 30 minute Zoom meeting with Joe — Punkeye Pictures</title>
+  <meta name="description" content="Book a 30 minute Zoom meeting with Joe at Punkeye Pictures. See how the model works for your organization.">
   <link rel="canonical" href="https://www.punkeyepictures.com/booking.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://scheduler.zoom.us">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link rel="stylesheet" href="css/styles.css">
-  <meta property="og:title" content="Book a call — Punkeye Pictures">
-  <meta property="og:description" content="Schedule a 15-minute intro call with Punkeye Pictures. See how the model works for your organization.">
+  <meta property="og:title" content="Book a 30 minute Zoom meeting with Joe — Punkeye Pictures">
+  <meta property="og:description" content="Book a 30 minute Zoom meeting with Joe. See how the Punkeye Pictures model works for your organization.">
   <meta property="og:url" content="https://www.punkeyepictures.com/booking.html">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.punkeyepictures.com/assets/logo.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Book a call — Punkeye Pictures">
-  <meta name="twitter:description" content="Schedule a 15-minute intro call with Punkeye Pictures. See how the model works for your organization.">
-  <style>
-    .booking-embed {
-      min-width: 320px;
-      height: 700px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    @media (min-width: 768px) {
-      .booking-embed { height: 750px; }
-    }
-  </style>
+  <meta name="twitter:title" content="Book a 30 minute Zoom meeting with Joe — Punkeye Pictures">
+  <meta name="twitter:description" content="Book a 30 minute Zoom meeting with Joe. See how the Punkeye Pictures model works for your organization.">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -58,20 +48,24 @@
   </header>
 
   <main id="main-content" role="main">
-    <section class="page-hero">
-      <h1>Book a call</h1>
+    <section class="page-hero page-hero--booking">
+      <h1>Book a <span class="booking-headline-num">30 minute</span> Zoom meeting with <span class="booking-headline-name">Joe</span></h1>
       <p class="subtitle">
-        15-minute intro. See how the model works, ask questions, no pressure.
+        See how the model works, ask questions, no pressure.
       </p>
     </section>
 
-    <section class="section">
-      <div class="calendly-inline-widget booking-embed reveal" data-url="https://calendly.com/joe-punkeyepictures/30min?hide_gdpr_banner=1" aria-label="Schedule a 15-minute call"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <section class="section booking-zoom-section">
+      <div class="booking-zoom-panel reveal">
+        <p class="booking-fallback">If the calendar below doesn’t load, <a href="https://scheduler.zoom.us/joe-moulins/30-mins-with-joe" target="_blank" rel="noopener noreferrer">open scheduling in a new tab</a>.</p>
+        <div class="booking-zoom-wrap">
+          <iframe src="https://scheduler.zoom.us/joe-moulins/30-mins-with-joe?embed=true" title="Book a 30 minute Zoom meeting with Joe — Punkeye Pictures" class="booking-zoom-iframe" loading="lazy" allow="fullscreen"></iframe>
+        </div>
+      </div>
     </section>
 
     <section class="section">
-      <p class="reveal" style="font-size: 0.95rem; color: var(--color-text-muted);">Prefer email? <a href="mailto:info@punkeyepictures.com?subject=Intro%20call%20request">info@punkeyepictures.com</a></p>
+      <p class="reveal booking-footer-note">Prefer email? <a href="mailto:info@punkeyepictures.com?subject=Zoom%20meeting%20request%20%E2%80%94%20Punkeye%20Pictures">info@punkeyepictures.com</a></p>
     </section>
   </main>
 
