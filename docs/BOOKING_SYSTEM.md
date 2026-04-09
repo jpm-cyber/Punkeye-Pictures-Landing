@@ -1,46 +1,46 @@
 # Booking System Design
 
+Updated: 2026-04-01
+
 ## Requirements
 
 - **Accessibility:** Works without a default mail client. Keyboard navigable. Screen-reader friendly.
 - **Conversion:** One-click to available times—no email handoff.
-- **Simplicity:** 20-minute intro call. Single event type for now.
-- **Integration:** Fits site aesthetic. No jarring redirect to external brand.
+- **Simplicity:** 30-minute intro call. Single event type for now.
+- **Integration:** Fits site aesthetic. Inline embed on `booking.html` where possible.
+- **Stack:** Google Workspace — Calendar **Appointment schedules** + **Google Meet** (replacing Zoom Scheduler).
 
-## Options
+## Production setup (Google Calendar & Meet)
 
-| Service | Cost | Pros | Cons |
-|---------|------|------|------|
-| **Calendly** | Free (1 event) | Widely used, reliable, good UX | Branded "Powered by Calendly" on free tier |
-| **Cal.com** | Free (self-host or cloud) | Open source, white-label, privacy-focused | Less familiar to users |
-| **Cal.com Cloud** | Free tier | Same as above, no self-hosting | — |
+1. In [Google Calendar](https://calendar.google.com), create an **Appointment schedule** (30 minutes, Vancouver/time zone as needed).
+2. Under **Video conferencing**, choose **Google Meet**.
+3. Open **Share** → **Website embed** and copy the iframe `src` URL (typically `https://calendar.google.com/calendar/appointments/schedules/…?gv=true`).
+4. In `booking.html`, paste that URL into:
+   - the `<iframe src="…">`
+   - the fallback link in `.booking-fallback` (same URL is fine; or use your `calendar.app.google/…` booking page for “open in new tab” if Google gives you both).
 
-**Recommendation:** Cal.com (free cloud) or Calendly (free). Both support inline embed so users stay on punkeyepictures.com.
+See Google Help: [Share your appointment schedule](https://support.google.com/calendar/answer/10733297).
+
+Until you replace the placeholder `YOUR_SCHEDULE_ID` segment, the embed will not load.
 
 ## Implementation
 
-1. **booking.html** — Dedicated page with embedded calendar
-2. **CTAs** — All "Book a call" / "Intro call" links point to `/booking.html`
-3. **Contact page** — "Book a 20-min call" for orgs links to booking; families/funders keep email (different flows)
+1. **booking.html** — Embedded Google scheduling widget + fallback link
+2. **CTAs** — “Book an intro call” / nav “Intro call” → `booking.html`
+3. **privacy.html** — Describes Google Calendar & Meet data handling
 
-## Setup Steps (Calendly)
+## Alternatives (not in use on punkeyepictures.com)
 
-1. Sign up at [calendly.com](https://calendly.com)
-2. Create event type: "20-minute intro call"
-3. Set availability (e.g. weekdays 10am–4pm PT)
-4. In booking.html, replace `punkeyepictures` in the embed URL with your Calendly username
+| Service | Notes |
+|---------|--------|
+| **Calendly / Cal.com** | Good if you ever leave Workspace scheduling |
+| **Zoom Scheduler** | Removed from the live site in favour of Meet |
 
-## Setup Steps (Cal.com)
+## Event type configuration (Google)
 
-1. Sign up at [cal.com](https://cal.com)
-2. Create event: "20-min intro call"
-3. Copy your event link (e.g. `cal.com/yourname/20min`)
-4. In booking.html, replace the Calendly embed with Cal.com's embed code and your URL
+- **Duration:** 30 minutes (match on-site copy)
+- **Location:** Google Meet (automatic link on the calendar event)
+- **Buffer:** Optional between bookings
+- **Reminders:** Calendar defaults + guest email as configured in Workspace
+- **Questions:** Optional — e.g. organization name or “what are you curious about?”
 
-## Event Type Configuration
-
-- **Duration:** 20 minutes
-- **Buffer:** 5 min between calls (optional)
-- **Location:** Zoom/Meet/phone—add your link in the service
-- **Reminders:** Enable email reminders (default in both services)
-- **Questions:** Optional—add "Organization name" or "What are you curious about?" for qualifying
