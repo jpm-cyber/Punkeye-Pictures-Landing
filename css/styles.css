@@ -445,10 +445,11 @@ main {
 }
 
 .booking-schedule-section {
-  max-width: 780px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
+/* Google’s scheduler needs a real width; narrow iframes show only the header card */
 .booking-schedule-panel {
   background: var(--color-surface);
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -457,6 +458,18 @@ main {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
   position: relative;
   overflow: hidden;
+}
+
+/* Don’t translate this panel: transforms on ancestors break some iframe/embed layouts */
+.booking-schedule-panel.reveal {
+  opacity: 0;
+  transform: none;
+  transition: opacity 0.55s var(--ease-out-expo);
+}
+
+.booking-schedule-panel.reveal.visible {
+  opacity: 1;
+  transform: none;
 }
 
 .booking-schedule-panel::before {
@@ -476,17 +489,22 @@ main {
 }
 
 .booking-schedule-wrap {
-  max-width: 750px;
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
   background: var(--color-bg);
   border: 1px solid rgba(0, 0, 0, 0.06);
+  min-height: 620px;
 }
 
 .booking-schedule-iframe {
   width: 100%;
-  height: 600px;
+  min-width: 100%;
+  max-width: 100%;
+  height: 720px;
+  min-height: 620px;
   border: 0;
   display: block;
 }
@@ -495,6 +513,7 @@ main {
   margin-bottom: 1.25rem;
   font-size: 0.98rem;
   color: var(--color-text-muted);
+  text-align: center;
 }
 
 .booking-fallback a {
@@ -527,7 +546,12 @@ main {
 
 @media (max-width: 480px) {
   .booking-schedule-iframe {
-    height: 600px;
+    height: 680px;
+    min-height: 600px;
+  }
+
+  .booking-schedule-wrap {
+    min-height: 640px;
   }
 
   .booking-schedule-panel {
