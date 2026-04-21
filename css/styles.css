@@ -250,7 +250,7 @@ main {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: url('../assets/photos/hero-phone-skyline.png');
+  background-image: url('/assets/photos/hero-phone-skyline.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
