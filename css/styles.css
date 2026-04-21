@@ -252,7 +252,8 @@ main {
   z-index: -1;
   background-image: url('/assets/photos/section-garden-family-autumn.png');
   background-size: cover;
-  background-position: center;
+  /* Subjects (and phone) sit on the left of the frame; anchor left-ish so cover doesn’t crop them */
+  background-position: 18% center;
   background-repeat: no-repeat;
 }
 
