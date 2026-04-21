@@ -239,7 +239,7 @@ main {
   animation: fadeUp 0.8s var(--ease-out-expo) 0.15s forwards;
 }
 
-/* Hero with background image - Vancouver skyline */
+/* Hero with background image - person photographing skyline across water */
 .page-hero--with-bg {
   position: relative;
   isolation: isolate;
@@ -250,7 +250,7 @@ main {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: url('../assets/photos/hero-vancouver-skyline.jpeg');
+  background-image: url('../assets/photos/hero-phone-skyline.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
