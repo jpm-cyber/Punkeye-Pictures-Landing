@@ -29,7 +29,7 @@ Until you replace the placeholder `YOUR_SCHEDULE_ID` segment, the embed will not
 2. **CTAs** — “Book an intro call” / nav “Intro call” → `booking.html`
 3. **privacy.html** — Describes Google Calendar & Meet data handling
 
-## Alternatives (not in use on punkeyepictures.com)
+## Alternatives (not in use on punkeyepictures.ca)
 
 | Service | Notes |
 |---------|--------|

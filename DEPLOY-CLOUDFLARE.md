@@ -10,7 +10,7 @@ Two options: **Direct Upload** (simplest) or **Git + Auto-Deploy** (for easy upd
 2. Name the project: `punkeye-pictures`
 3. Drag and drop the entire `Punkeye Pictures web Site` folder (or create a zip of: index.html, about.html, what-we-do.html, contact.html, css/, js/)
 4. Deploy. You'll get a URL like `punkeye-pictures.pages.dev`
-5. **Add custom domain:** Project → **Custom domains** → **Set up a custom domain** → enter `www.punkeypictures.com`
+5. **Add custom domain:** Project → **Custom domains** → **Set up a custom domain** → enter `www.punkeyepictures.ca`
 6. Cloudflare will show DNS instructions. If your domain uses Cloudflare nameservers, it configures automatically. Otherwise, add the CNAME record they provide at your DNS provider.
 
 ---
@@ -47,14 +47,14 @@ git push -u origin main
 ### 3. Add custom domain
 
 1. Pages project → **Custom domains** → **Set up a custom domain**
-2. Enter: `www.punkeypictures.com`
-3. If punkeypictures.com is on Cloudflare: it configures DNS automatically
+2. Enter: `www.punkeyepictures.ca`
+3. If punkeyepictures.ca is on Cloudflare: it configures DNS automatically
 4. If not: add the CNAME record Cloudflare shows at your current DNS provider
 
 ### 4. Root domain (optional)
 
-To have `punkeypictures.com` (without www) also work:
-- Add `punkeypictures.com` as a second custom domain in Cloudflare Pages
+To have `punkeyepictures.ca` (without www) also work:
+- Add `punkeyepictures.ca` as a second custom domain in Cloudflare Pages
 - Cloudflare will set up redirect from root to www, or serve both
 
 ---
@@ -64,7 +64,7 @@ To have `punkeypictures.com` (without www) also work:
 If your domain is at another registrar (GoDaddy, Namecheap, etc.):
 
 **Option 1 – Use Cloudflare nameservers (recommended)**  
-1. Add the site in Cloudflare: **Websites** → **Add a site** → enter punkeypictures.com  
+1. Add the site in Cloudflare: **Websites** → **Add a site** → enter punkeyepictures.ca  
 2. Cloudflare gives you two nameservers (e.g. `ada.ns.cloudflare.com`, `bob.ns.cloudflare.com`)  
 3. At your registrar, change the domain's nameservers to those two  
 4. After DNS propagates, add the custom domain in Pages as above  
