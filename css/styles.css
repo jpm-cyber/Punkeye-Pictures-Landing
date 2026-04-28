@@ -267,7 +267,20 @@ main {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(248, 246, 244, 0.4) 0%, rgba(248, 246, 244, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(248, 246, 244, 0.68) 0%, rgba(248, 246, 244, 0.93) 100%);
+}
+
+.page-hero--with-bg h1,
+.page-hero--with-bg .subtitle,
+.page-hero--with-bg .reveal {
+  text-shadow: 0 1px 2px rgba(248, 246, 244, 0.75);
+}
+
+.page-hero--with-bg .subtitle,
+.page-hero--with-bg .reveal {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Section images - full width within section, rounded corners */
