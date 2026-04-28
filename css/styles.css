@@ -6,7 +6,7 @@
   --color-surface: #f0ede8;
   --color-surface-alt: #e8e4de;
   --color-text: #1a1a1a;
-  --color-text-muted: #5c5c5c;
+  --color-text-muted: #474747;
   --color-accent-coral: #c45c3e;
   --color-accent-gold: #b8860b;
   --color-accent-teal: #2d7a7a;
@@ -63,6 +63,11 @@ body {
   background: var(--color-bg);
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent-teal);
+  outline-offset: 2px;
 }
 
 /* Animated gradient background - warm, subtle */

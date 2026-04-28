@@ -17,6 +17,9 @@ function initNav() {
     const href = link.getAttribute('href') || '';
     if (href === currentPath) {
       link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    } else if (link.hasAttribute('aria-current')) {
+      link.removeAttribute('aria-current');
     }
   });
 
