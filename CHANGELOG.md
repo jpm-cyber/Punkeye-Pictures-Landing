@@ -3,7 +3,7 @@
 ## 2026-04-28
 
 ### Updated
-- Reframed core site copy to match current 2026 delivery status, shifting from "grant pending trial" language to active disability-led programs in progress.
+- Reframed core site copy to match current 2026 delivery status, shifting from "grant pending trial" language to active disability-centered programs in progress.
 - Aligned homepage, About, What We Do, Contact, FAQ, Privacy, Booking, Thoughts, and 404 footer messaging with the current Punkeye mission and operations framing.
 - Tightened privacy language to reflect Canadian infrastructure and partner-controlled media custody.
 

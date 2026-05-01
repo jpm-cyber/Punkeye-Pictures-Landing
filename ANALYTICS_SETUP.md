@@ -1,31 +1,78 @@
-# Cloudflare Web Analytics Setup
+# Analytics Setup (No-Cost)
 
-The site already includes the Cloudflare Web Analytics beacon script. To start tracking visitors:
+This site now supports:
 
-## 1. Get your token
-
-1. Go to [dash.cloudflare.com](https://dash.cloudflare.com)
-2. In the left sidebar, click **Web Analytics** (under Analytics & Logs)
-3. Click **Add a site**
-4. Enter `punkeyepictures.ca` (or `www.punkeyepictures.ca` if that’s your canonical domain)
-5. Complete verification (Cloudflare may auto-verify if the domain is already in your account)
-6. Copy the token from the script snippet Cloudflare shows you (it looks like `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`)
-
-## 2. Add the token to the site
-
-Replace `YOUR_TOKEN` with your token in all four HTML files:
-
-- `index.html`
-- `about.html`
-- `what-we-do.html`
-- `contact.html`
-
-Search for `"token": "YOUR_TOKEN"` and replace `YOUR_TOKEN` with your actual token.
-
-## 3. Deploy
-
-Push your changes and deploy. Data should appear in the Cloudflare Web Analytics dashboard within a few minutes.
+1. **Cloudflare Web Analytics** for simple traffic trends (already embedded).
+2. **Optional Umami** for richer event-level analytics (CTA clicks, scroll depth, referrer attribution).
 
 ---
 
-**Note:** If your site is already proxied through Cloudflare (e.g. Cloudflare Pages), Web Analytics may be enabled by default. Check **Analytics & Logs → Web Analytics** in the dashboard to see if data is already being collected before adding the beacon.
+## Cloudflare Web Analytics (already active)
+
+The Cloudflare beacon script is already present on all pages. No further code changes are required if you only want baseline analytics.
+
+Use this for:
+- total visits/pageviews
+- top pages
+- quick trend checks
+
+---
+
+## Umami (optional, richer detail)
+
+The site includes a loader at:
+- `js/analytics-loader.js`
+
+To enable Umami:
+1. Open `js/analytics-loader.js`
+2. Set:
+   - `umamiHost` (for example `https://umami.yourdomain.com`)
+   - `websiteId` (UUID from Umami)
+3. Deploy
+
+Once enabled, site events are tracked from `js/main.js`:
+- `intro_call_click`
+- `contact_click`
+- `email_click`
+- `outbound_click`
+- `scroll_50`
+- `scroll_90`
+
+The site also stores first-touch UTM/ref values in localStorage and includes them with events.
+
+---
+
+## Weekly traffic report (Umami API)
+
+Use:
+- `scripts/umami_report.py`
+
+Example:
+
+```bash
+UMAMI_BASE_URL="https://YOUR_UMAMI_HOST" \
+UMAMI_API_KEY="YOUR_API_KEY" \
+UMAMI_WEBSITE_ID="YOUR_WEBSITE_UUID" \
+python3 scripts/umami_report.py
+```
+
+Output:
+- `traffic_report.txt` in project root
+
+---
+
+## Cron automation (macOS/Linux)
+
+Run weekly report every Monday at 9am:
+
+```cron
+0 9 * * 1 cd "/Volumes/HomeX/joemini/Projects/Punkeye Pictures web Site" && UMAMI_BASE_URL="https://YOUR_UMAMI_HOST" UMAMI_API_KEY="YOUR_API_KEY" UMAMI_WEBSITE_ID="YOUR_WEBSITE_UUID" /usr/bin/python3 scripts/umami_report.py >> traffic_cron.log 2>&1
+```
+
+---
+
+## Recommendation
+
+If you want detailed analytics without paying:
+- keep Cloudflare for baseline traffic
+- run self-hosted Umami (or equivalent) and enable the loader above for event-level detail

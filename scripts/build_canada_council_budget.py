@@ -74,7 +74,7 @@ def build_cover(ws):
     ws["A7"] = "Project overview"
     ws["A7"].font = Font(bold=True)
     ws["A8"] = (
-        "Disability-led media arts initiative with two dimensions: "
+        "Disability-centered media arts initiative with two dimensions: "
         "(1) Artistic Inquiry & Creation — 6-month research-creation pilot with 25-30 participants, "
         "process films and community screenings; (2) Sector Innovation & Replication — 12-month phase "
         "documenting and sharing the workflow as a turnkey toolkit for disability-support and arts organizations."
